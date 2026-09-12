@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Image
               src={logoFull}
-              alt={`${site.name} — ${site.tagline}`}
+              alt={`${site.name}: ${site.tagline}`}
               className="w-56 rounded-xl sm:w-64"
             />
             <p className="mt-4 text-lg font-bold text-brand-gold-dark">

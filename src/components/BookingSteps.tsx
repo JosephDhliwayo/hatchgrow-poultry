@@ -58,7 +58,7 @@ export default function BookingSteps() {
           Want Us to Hatch Your Eggs?
         </h2>
         <p className="mt-4 text-brand-green/70">
-          The process is simple — here&apos;s how a booking works from
+          The process is simple: here&apos;s how a booking works from
           start to finish.
         </p>
       </Reveal>
@@ -70,7 +70,7 @@ export default function BookingSteps() {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-gold text-sm font-bold text-brand-green-dark transition-transform duration-300 hover:scale-110">
                 {i + 1}
               </span>
-              <h3 className="mt-3 font-bold text-brand-green">Step {i + 1} — {step.title}</h3>
+              <h3 className="mt-3 font-bold text-brand-green">Step {i + 1}: {step.title}</h3>
               <p className="mt-2 text-sm text-brand-green/70">
                 {step.description}
               </p>
@@ -95,12 +95,12 @@ export default function BookingSteps() {
 
       <Reveal className="mt-10 rounded-2xl bg-brand-green px-6 py-6 text-center sm:px-10">
         <p className="text-white/90">
-          Booking is required before drop-off — we&apos;ll agree your
+          Booking is required before drop-off. We&apos;ll agree your
           submission date and let you know the day for chick collection.
         </p>
         <p className="mt-2 text-sm italic text-white/60">
           &ldquo;Unoisa nyaya yekubooker, hakuna zvekungouya uchitowana
-          machicks — unobooker, tokuudza day rekuzoita collection.&rdquo;
+          machicks, unobooker, tokuudza day rekuzoita collection.&rdquo;
         </p>
         <a
           href={whatsappLink("Hi HatchGrow, I'd like to book an egg hatching slot.")}

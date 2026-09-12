@@ -28,8 +28,8 @@ export default function Header() {
         scrolled ? "is-scrolled" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="#top" aria-label={`${site.name} home`}>
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-3 gap-y-2 px-3 py-3 sm:gap-4 sm:px-6">
+        <Link href="#top" aria-label={`${site.name} home`} className="min-w-0 shrink-0">
           <Logo />
         </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <a
             href={telLink(site.phones[0])}
             className="hidden rounded-full border border-brand-green/20 px-4 py-2 text-sm font-semibold text-brand-green transition-colors hover:border-brand-green/40 sm:inline-block"
@@ -54,7 +54,7 @@ export default function Header() {
           </a>
           <a
             href={whatsappLink("Hi HatchGrow, I'd like to book an egg hatching slot.")}
-            className="rounded-full bg-brand-green px-4 py-2 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-brand-green-dark"
+            className="rounded-full bg-brand-green px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-brand-green-dark sm:px-4 sm:py-2 sm:text-sm"
           >
             WhatsApp
           </a>

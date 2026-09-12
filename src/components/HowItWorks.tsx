@@ -22,12 +22,12 @@ const steps = [
       "We monitor the eggs throughout incubation and may candle them to check development and identify infertile eggs or those whose embryos have stopped developing.",
   },
   {
-    title: "Final Hatching Stage — Around Day 18",
+    title: "Final Hatching Stage (Around Day 18)",
     description:
       "Egg turning stops and the incubator is prepared for hatching. Humidity is adjusted as needed. Customers should avoid unnecessary opening or disturbance of the incubator at this stage.",
   },
   {
-    title: "Hatch Day — Around Day 21",
+    title: "Hatch Day (Around Day 21)",
     description:
       "After approximately 21 days, healthy chicks begin to break through their shells. Chicks are given time to hatch and dry properly before being handled.",
   },

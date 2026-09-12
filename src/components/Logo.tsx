@@ -18,15 +18,17 @@ export default function Logo({ variant = "light", className = "" }: LogoProps) {
         alt=""
         width={44}
         height={38}
-        className="h-9 w-auto shrink-0 sm:h-10"
+        className="h-8 w-auto shrink-0 sm:h-10"
         priority
       />
-      <div className="leading-tight">
-        <p className="font-extrabold tracking-tight text-lg sm:text-xl">
+      <div className="min-w-0 leading-tight">
+        <p className="whitespace-nowrap font-extrabold tracking-tight text-base sm:text-xl">
           <span className={textPrimary}>Hatch</span>
           <span className={textSecondary}>Grow</span>
         </p>
-        <p className={`text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase ${subText}`}>
+        <p
+          className={`hidden text-[10px] font-semibold tracking-[0.2em] uppercase min-[380px]:block sm:text-xs ${subText}`}
+        >
           Poultry
         </p>
       </div>

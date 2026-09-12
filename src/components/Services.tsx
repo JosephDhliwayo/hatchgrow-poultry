@@ -5,7 +5,7 @@ const services = [
     icon: "🥚",
     title: "Custom Egg Hatching",
     description:
-      "Submit your fertile chicken eggs and we manage the full incubation process — setting, turning, monitoring and hatching — until your chicks are ready for collection.",
+      "Submit your fertile chicken eggs and we manage the full incubation process (setting, turning, monitoring and hatching) until your chicks are ready for collection.",
     cta: "Book egg hatching",
     message: "Hi HatchGrow, I'd like to book custom egg hatching.",
   },

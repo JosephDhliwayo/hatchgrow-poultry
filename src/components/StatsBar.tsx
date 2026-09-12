@@ -18,6 +18,12 @@ function CountUp({ target, active }: { target: number; active: boolean }) {
 
   useEffect(() => {
     if (!active) return;
+
+    if (typeof requestAnimationFrame === "undefined") {
+      setValue(target);
+      return;
+    }
+
     const duration = 1100;
     const start = performance.now();
 
@@ -42,6 +48,12 @@ export default function StatsBar() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setActive(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {

@@ -27,7 +27,7 @@ export default function Hero() {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand-green/80">
             Have fertile eggs but no incubator? HatchGrow Poultry hatches
             them for you. Submit your fertile chicken eggs and we take care
-            of everything — from setting the eggs through to hatch day,
+            of everything, from setting the eggs through to hatch day,
             in approximately 21 days.
           </p>
 
