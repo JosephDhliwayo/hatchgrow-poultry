@@ -1,4 +1,5 @@
 import { whatsappLink } from "@/lib/site";
+import Reveal from "./Reveal";
 
 const steps = [
   {
@@ -49,7 +50,7 @@ const eggGuidelines = [
 export default function BookingSteps() {
   return (
     <section id="booking" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <div className="mx-auto max-w-2xl text-center">
+      <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
           🥚 Get Started
         </p>
@@ -60,38 +61,39 @@ export default function BookingSteps() {
           The process is simple — here&apos;s how a booking works from
           start to finish.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {steps.map((step, i) => (
-          <div
-            key={step.title}
-            className="rounded-2xl border border-brand-green/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-gold text-sm font-bold text-brand-green-dark">
-              {i + 1}
-            </span>
-            <h3 className="mt-3 font-bold text-brand-green">Step {i + 1} — {step.title}</h3>
-            <p className="mt-2 text-sm text-brand-green/70">
-              {step.description}
-            </p>
-          </div>
+          <Reveal key={step.title} delay={Math.min(i, 5) * 80}>
+            <div className="rounded-2xl border border-brand-green/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-gold text-sm font-bold text-brand-green-dark transition-transform duration-300 hover:scale-110">
+                {i + 1}
+              </span>
+              <h3 className="mt-3 font-bold text-brand-green">Step {i + 1} — {step.title}</h3>
+              <p className="mt-2 text-sm text-brand-green/70">
+                {step.description}
+              </p>
+            </div>
+          </Reveal>
         ))}
 
-        <div className="rounded-2xl border-2 border-dashed border-brand-green/20 bg-brand-green/5 p-6">
-          <h3 className="font-bold text-brand-green">Eggs should preferably be:</h3>
-          <ul className="mt-3 space-y-2 text-sm text-brand-green/75">
-            {eggGuidelines.map((item) => (
-              <li key={item} className="flex gap-2">
-                <span className="text-brand-gold-dark">✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Reveal delay={480}>
+          <div className="rounded-2xl border-2 border-dashed border-brand-green/20 bg-brand-green/5 p-6">
+            <h3 className="font-bold text-brand-green">Eggs should preferably be:</h3>
+            <ul className="mt-3 space-y-2 text-sm text-brand-green/75">
+              {eggGuidelines.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-brand-gold-dark">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
 
-      <div className="mt-10 rounded-2xl bg-brand-green px-6 py-6 text-center sm:px-10">
+      <Reveal className="mt-10 rounded-2xl bg-brand-green px-6 py-6 text-center sm:px-10">
         <p className="text-white/90">
           Booking is required before drop-off — we&apos;ll agree your
           submission date and let you know the day for chick collection.
@@ -102,11 +104,11 @@ export default function BookingSteps() {
         </p>
         <a
           href={whatsappLink("Hi HatchGrow, I'd like to book an egg hatching slot.")}
-          className="mt-5 inline-flex rounded-full bg-brand-gold px-6 py-3 text-sm font-semibold text-brand-green-dark transition-colors hover:bg-brand-gold-dark"
+          className="mt-5 inline-flex rounded-full bg-brand-gold px-6 py-3 text-sm font-semibold text-brand-green-dark transition-transform duration-200 hover:-translate-y-0.5 hover:bg-brand-gold-dark"
         >
           Start Your Booking on WhatsApp
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 }

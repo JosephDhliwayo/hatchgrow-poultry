@@ -20,12 +20,8 @@ export default function Home() {
         <Reveal>
           <Services />
         </Reveal>
-        <Reveal>
-          <HowItWorks />
-        </Reveal>
-        <Reveal>
-          <BookingSteps />
-        </Reveal>
+        <HowItWorks />
+        <BookingSteps />
         <Reveal>
           <ImportantInfo />
         </Reveal>

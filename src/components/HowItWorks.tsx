@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const steps = [
   {
     title: "Egg Collection & Inspection",
@@ -40,7 +42,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-brand-cream-dark/60 py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
             🐣 The Process
           </p>
@@ -51,20 +53,29 @@ export default function HowItWorks() {
             Chicken eggs normally take approximately 21 days to hatch. Here&apos;s
             what happens at every stage.
           </p>
-        </div>
+        </Reveal>
 
         <ol className="mt-14 space-y-8 border-l-2 border-brand-green/15 pl-8 sm:pl-10">
-          {steps.map((step, i) => (
-            <li key={step.title} className="relative">
-              <span className="absolute -left-[2.85rem] flex h-9 w-9 items-center justify-center rounded-full bg-brand-green text-sm font-bold text-white sm:-left-[3.35rem]">
-                {i + 1}
-              </span>
-              <h3 className="text-lg font-bold text-brand-green">
-                {step.title}
-              </h3>
-              <p className="mt-1.5 text-brand-green/70">{step.description}</p>
-            </li>
-          ))}
+          {steps.map((step, i) => {
+            const isHatchDay = step.title.startsWith("Hatch Day");
+            return (
+              <Reveal key={step.title} delay={Math.min(i, 4) * 90}>
+                <li className="relative">
+                  <span
+                    className={`absolute -left-[2.85rem] flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-white transition-transform duration-300 hover:scale-110 sm:-left-[3.35rem] ${
+                      isHatchDay ? "animate-pulse-ring-gold bg-brand-gold-dark" : "bg-brand-green"
+                    }`}
+                  >
+                    {i + 1}
+                  </span>
+                  <h3 className="text-lg font-bold text-brand-green">
+                    {step.title} {isHatchDay && <span className="animate-float inline-block">🐣</span>}
+                  </h3>
+                  <p className="mt-1.5 text-brand-green/70">{step.description}</p>
+                </li>
+              </Reveal>
+            );
+          })}
         </ol>
       </div>
     </section>
