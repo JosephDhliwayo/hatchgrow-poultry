@@ -95,12 +95,10 @@ export default function BookingSteps() {
 
       <Reveal className="mt-10 rounded-2xl bg-brand-green px-6 py-6 text-center sm:px-10">
         <p className="text-white/90">
-          Booking is required before drop-off. We&apos;ll agree your
-          submission date and let you know the day for chick collection.
-        </p>
-        <p className="mt-2 text-sm italic text-white/60">
-          &ldquo;Unoisa nyaya yekubooker, hakuna zvekungouya uchitowana
-          machicks, unobooker, tokuudza day rekuzoita collection.&rdquo;
+          Booking is required in advance. Please do not arrive expecting to
+          collect chicks without a prior booking. Once you book, we will
+          confirm your submission date and let you know the day for
+          collection.
         </p>
         <a
           href={whatsappLink("Hi HatchGrow, I'd like to book an egg hatching slot.")}

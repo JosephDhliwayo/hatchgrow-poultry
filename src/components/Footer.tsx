@@ -13,9 +13,6 @@ export default function Footer() {
               alt={`${site.name}: ${site.tagline}`}
               className="w-56 rounded-xl sm:w-64"
             />
-            <p className="mt-4 text-lg font-bold text-brand-gold-dark">
-              🐣 Hatch Today. Grow Tomorrow.
-            </p>
           </div>
 
           <div className="text-sm text-brand-green/70">
