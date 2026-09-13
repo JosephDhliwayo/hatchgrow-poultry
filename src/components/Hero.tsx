@@ -1,5 +1,6 @@
 import { site, telLink, whatsappLink } from "@/lib/site";
 import ChickSoundButton from "./ChickSoundButton";
+import { ChickIcon, ClockIcon, EggIcon, PinIcon } from "./icons";
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-4 py-1.5 text-sm font-semibold text-brand-green">
-            🥚 Custom Egg Hatching Service
+            <EggIcon className="h-4 w-4" /> Custom Egg Hatching Service
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-brand-green sm:text-5xl lg:text-6xl">
@@ -46,8 +47,14 @@ export default function Hero() {
             </a>
           </div>
 
-          <p className="mt-6 text-sm text-brand-green/60">
-            📍 {site.address} &nbsp;•&nbsp; 🕐 {site.hours}
+          <p className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-brand-green/60">
+            <span className="inline-flex items-center gap-1.5">
+              <PinIcon className="h-4 w-4" /> {site.address}
+            </span>
+            <span aria-hidden="true">&bull;</span>
+            <span className="inline-flex items-center gap-1.5">
+              <ClockIcon className="h-4 w-4" /> {site.hours}
+            </span>
           </p>
 
           <div className="mt-5">
@@ -62,7 +69,7 @@ export default function Hero() {
               <p className="text-sm font-semibold uppercase tracking-wide text-brand-green/60">
                 Incubation Timeline
               </p>
-              <span className="animate-float inline-block text-2xl">🐣</span>
+              <ChickIcon className="animate-float h-6 w-6 text-brand-gold-dark" />
             </div>
 
             <div className="mt-6 space-y-5">

@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { ChickIcon } from "./icons";
 
 const steps = [
   {
@@ -43,8 +44,8 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-brand-cream-dark/60 py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
-            🐣 The Process
+          <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
+            <ChickIcon className="h-4 w-4" /> The Process
           </p>
           <h2 className="mt-3 text-3xl font-extrabold text-brand-green sm:text-4xl">
             How the Hatching Process Works
@@ -68,8 +69,11 @@ export default function HowItWorks() {
                   >
                     {i + 1}
                   </span>
-                  <h3 className="text-lg font-bold text-brand-green">
-                    {step.title} {isHatchDay && <span className="animate-float inline-block">🐣</span>}
+                  <h3 className="flex items-center gap-2 text-lg font-bold text-brand-green">
+                    {step.title}
+                    {isHatchDay && (
+                      <ChickIcon className="animate-float h-5 w-5 text-brand-gold-dark" />
+                    )}
                   </h3>
                   <p className="mt-1.5 text-brand-green/70">{step.description}</p>
                 </li>

@@ -1,5 +1,6 @@
 import { whatsappLink } from "@/lib/site";
 import Reveal from "./Reveal";
+import { CheckIcon, EggIcon } from "./icons";
 
 const steps = [
   {
@@ -51,8 +52,8 @@ export default function BookingSteps() {
   return (
     <section id="booking" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
-          🥚 Get Started
+        <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-gold-dark">
+          <EggIcon className="h-4 w-4" /> Get Started
         </p>
         <h2 className="mt-3 text-3xl font-extrabold text-brand-green sm:text-4xl">
           Want Us to Hatch Your Eggs?
@@ -84,7 +85,7 @@ export default function BookingSteps() {
             <ul className="mt-3 space-y-2 text-sm text-brand-green/75">
               {eggGuidelines.map((item) => (
                 <li key={item} className="flex gap-2">
-                  <span className="text-brand-gold-dark">✓</span>
+                  <CheckIcon className="h-4 w-4 shrink-0 text-brand-gold-dark" />
                   {item}
                 </li>
               ))}

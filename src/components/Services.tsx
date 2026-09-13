@@ -1,8 +1,9 @@
 import { whatsappLink } from "@/lib/site";
+import { ChickIcon, EggIcon } from "./icons";
 
 const services = [
   {
-    icon: "🥚",
+    icon: EggIcon,
     title: "Custom Egg Hatching",
     description:
       "Submit your fertile chicken eggs and we manage the full incubation process (setting, turning, monitoring and hatching) until your chicks are ready for collection.",
@@ -10,7 +11,7 @@ const services = [
     message: "Hi HatchGrow, I'd like to book custom egg hatching.",
   },
   {
-    icon: "🐥",
+    icon: ChickIcon,
     title: "Day-Old Chick Sales",
     description:
       "Looking to start or restock your flock? Get quality day-old chicks straight from our hatchery.",
@@ -37,8 +38,8 @@ export default function Services() {
             key={service.title}
             className="group flex flex-col rounded-2xl border border-brand-green/10 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
           >
-            <span className="inline-block w-fit text-4xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
-              {service.icon}
+            <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+              <service.icon className="h-7 w-7" />
             </span>
             <h3 className="mt-4 text-xl font-bold text-brand-green">
               {service.title}

@@ -1,3 +1,5 @@
+import { WarningIcon } from "./icons";
+
 const notes = [
   "Only fertile eggs should be submitted for hatching.",
   "The 21-day period is an approximate incubation period for chicken eggs.",
@@ -13,7 +15,7 @@ export default function ImportantInfo() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="rounded-2xl border border-brand-gold/30 bg-white p-8 shadow-sm sm:p-10">
           <h2 className="flex items-center gap-2 text-xl font-extrabold text-brand-green sm:text-2xl">
-            <span aria-hidden="true">⚠️</span> Important Information for Customers
+            <WarningIcon className="h-5 w-5 text-brand-gold-dark" /> Important Information for Customers
           </h2>
           <ul className="mt-6 space-y-3">
             {notes.map((note) => (

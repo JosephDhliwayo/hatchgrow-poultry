@@ -1,4 +1,5 @@
 import { site, telLink, whatsappLink } from "@/lib/site";
+import { ClockIcon, PhoneIcon, PinIcon } from "./icons";
 
 export default function Contact() {
   return (
@@ -35,11 +36,8 @@ export default function Contact() {
 
           <dl className="grid gap-6 sm:grid-cols-2">
             <div className="flex gap-3">
-              <span
-                aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
-              >
-                📍
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-brand-gold">
+                <PinIcon className="h-5 w-5" />
               </span>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
@@ -50,11 +48,8 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-3">
-              <span
-                aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
-              >
-                🕐
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-brand-gold">
+                <ClockIcon className="h-5 w-5" />
               </span>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
@@ -65,11 +60,8 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-3 sm:col-span-2">
-              <span
-                aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
-              >
-                📞
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-brand-gold">
+                <PhoneIcon className="h-5 w-5" />
               </span>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">

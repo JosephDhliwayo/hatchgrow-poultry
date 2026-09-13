@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logoFull from "../../public/logo.png";
 import { site, telLink } from "@/lib/site";
+import { ClockIcon, PhoneIcon, PinIcon } from "./icons";
 
 export default function Footer() {
   return (
@@ -18,11 +19,11 @@ export default function Footer() {
           <div className="text-sm text-brand-green/70">
             <p className="font-semibold text-brand-green">Contact</p>
             <p className="mt-2 flex items-start gap-2">
-              <span aria-hidden="true">📍</span>
+              <PinIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold-dark" />
               <span>{site.address}</span>
             </p>
             <p className="mt-2 flex items-start gap-2">
-              <span aria-hidden="true">📞</span>
+              <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold-dark" />
               <span>
                 {site.phones.map((phone) => (
                   <a
@@ -36,7 +37,7 @@ export default function Footer() {
               </span>
             </p>
             <p className="mt-2 flex items-start gap-2">
-              <span aria-hidden="true">🕐</span>
+              <ClockIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold-dark" />
               <span>{site.hours}</span>
             </p>
           </div>

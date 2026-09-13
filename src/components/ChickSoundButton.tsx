@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { ChickIcon } from "./icons";
 
 let sharedAudioCtx: AudioContext | null = null;
 
@@ -55,7 +56,7 @@ export default function ChickSoundButton({ className = "" }: { className?: strin
       onClick={handleClick}
       className={`inline-flex items-center gap-2 rounded-full border border-brand-green/15 bg-white px-4 py-2 text-sm font-semibold text-brand-green shadow-sm transition-colors hover:border-brand-green/30 ${className}`}
     >
-      <span className={bounce ? "animate-wiggle inline-block" : "inline-block"}>🐥</span>
+      <ChickIcon className={bounce ? "animate-wiggle h-4 w-4" : "h-4 w-4"} />
       Hear a chick
     </button>
   );
