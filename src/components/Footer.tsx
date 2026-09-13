@@ -17,15 +17,28 @@ export default function Footer() {
 
           <div className="text-sm text-brand-green/70">
             <p className="font-semibold text-brand-green">Contact</p>
-            <p className="mt-2">{site.address}</p>
-            {site.phones.map((phone) => (
-              <p key={phone}>
-                <a href={telLink(phone)} className="hover:text-brand-green">
-                  {phone}
-                </a>
-              </p>
-            ))}
-            <p className="mt-2">{site.hours}</p>
+            <p className="mt-2 flex items-start gap-2">
+              <span aria-hidden="true">📍</span>
+              <span>{site.address}</span>
+            </p>
+            <p className="mt-2 flex items-start gap-2">
+              <span aria-hidden="true">📞</span>
+              <span>
+                {site.phones.map((phone) => (
+                  <a
+                    key={phone}
+                    href={telLink(phone)}
+                    className="block hover:text-brand-green"
+                  >
+                    {phone}
+                  </a>
+                ))}
+              </span>
+            </p>
+            <p className="mt-2 flex items-start gap-2">
+              <span aria-hidden="true">🕐</span>
+              <span>{site.hours}</span>
+            </p>
           </div>
 
           <div className="text-sm text-brand-green/70">

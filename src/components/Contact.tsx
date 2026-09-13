@@ -34,33 +34,59 @@ export default function Contact() {
           </div>
 
           <dl className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
-                Address
-              </dt>
-              <dd className="mt-1.5 text-white/85">{site.address}</dd>
+            <div className="flex gap-3">
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
+              >
+                📍
+              </span>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                  Address
+                </dt>
+                <dd className="mt-1.5 text-white/85">{site.address}</dd>
+              </div>
             </div>
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
-                Working Hours
-              </dt>
-              <dd className="mt-1.5 text-white/85">{site.hours}</dd>
+
+            <div className="flex gap-3">
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
+              >
+                🕐
+              </span>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                  Working Hours
+                </dt>
+                <dd className="mt-1.5 text-white/85">{site.hours}</dd>
+              </div>
             </div>
-            <div className="sm:col-span-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
-                Phone
-              </dt>
-              <dd className="mt-1.5 space-y-1">
-                {site.phones.map((phone) => (
-                  <a
-                    key={phone}
-                    href={telLink(phone)}
-                    className="block text-white/85 hover:text-white"
-                  >
-                    {phone}
-                  </a>
-                ))}
-              </dd>
+
+            <div className="flex gap-3 sm:col-span-2">
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-base"
+              >
+                📞
+              </span>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
+                  Phone
+                </dt>
+                <dd className="mt-1.5 space-y-1">
+                  {site.phones.map((phone) => (
+                    <a
+                      key={phone}
+                      href={telLink(phone)}
+                      className="block text-white/85 hover:text-white"
+                    >
+                      {phone}
+                    </a>
+                  ))}
+                </dd>
+              </div>
             </div>
           </dl>
         </div>
